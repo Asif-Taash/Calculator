@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" placeholder="0" id="inputBox" readonly>
+        <div class="clear">
+            <ion-icon name="backspace-outline" id="clearIcon" onclick="deleteLast()"></ion-icon>
+        </div>
+        <div class="box">
+            <button id="delete" class="operator" onclick="clearResult()">C</button>
+            <button class="operator" onclick="addBrackets()">()</button>
+            <button class="operator" onclick="getValues('%')">%</button>
+            <button class="operator" onclick="getValues('/')">/</button>
+            <button onclick="getValues('7')">7</button>
+            <button onclick="getValues('8')">8</button>
+            <button onclick="getValues('9')">9</button>
+            <button class="operator" onclick="getValues('*')">*</button>
+            <button onclick="getValues('4')">4</button>
+            <button onclick="getValues('5')">5</button>
+            <button onclick="getValues('6')">6</button>
+            <button class="operator" onclick="getValues('-')">-</button>
+            <button onclick="getValues('1')">1</button>
+            <button onclick="getValues('2')">2</button>
+            <button onclick="getValues('3')">3</button>
+            <button class="operator" onclick="getValues('+')">+</button>
+            <button id="opposite" onclick="reverseResult()">+/-</button>
+            <button onclick="getValues('0')">0</button>
+            <button onclick="getValues('.')">.</button>
+            <button id="equal" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html> 
